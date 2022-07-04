@@ -6,7 +6,8 @@ use self::commands::Commands;
 
 #[derive(Parser, Debug)]
 #[clap(author, version, about, long_about = None)]
+#[clap(propagate_version = true)]
 pub struct Args {
     #[clap(subcommand)]
-    commands: Commands,
+    pub commands: Commands,
 }
